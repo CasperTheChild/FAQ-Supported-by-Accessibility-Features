@@ -136,7 +136,7 @@ body {
 }
 
 .QuestionLine:hover span {
-    color: var(--Dark-Purple);
+    color: var(--Grayish-Purple);
 }
 
 .QuestionLine::selection {
