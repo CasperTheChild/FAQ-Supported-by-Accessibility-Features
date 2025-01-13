@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manrope:wght@200..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-Pink: hsl(275, 100%, 97%);
+    --Grayish-Purple: hsl(292, 16%, 49%);
+    --Dark-Purple: hsl(292, 42%, 14%);
+
+    font-size: 1px;
+    font-family: "Work Sans", sans-serif;
+
+    --Font-Weight-Little: 400;
+    --Font-Weight-Medium: 500;
+    --Font-Weight-Big: 700;
+}
+
+:root, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, span {
+    margin: 0;
+    padding: 0;
+    
+    font-size: 14rem;
+    color: var(--Dark-Purple);
+    font-weight: var(--Font-Weight-Little);
+}
+
+.Flex {
+    display: flex;
+}
+
+.FlexTwoEnds {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.DisplayNone {
+    display: none;
+}
+
+.Bold {
+    font-size: clamp(32rem, 8vw, 56rem) !important;
+    font-weight: var(--Font-Weight-Big);
+}
+
+.SemiBold {
+    font-size: 16rem;
+    font-weight: var(--Font-Weight-Medium) !important;
+}
+
+/*      Specific        */
+
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: var(--Light-Pink);
+
+    object-fit: contain;
+    width: 100%;
+}
+
+.BackgroundPattern {
+    max-width: 100%;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+}
+
+.BackgroundPattern * {
+    position: absolute;
+}
+
+.Container {
+    width: clamp(327rem, 54.5vw, 600rem);
+    padding-top: clamp(142.5rem, 23.75vw, 167.5rem);
+
+    margin: 0 auto;
+}
+
+.WhiteContainer {
+    padding: clamp(24rem, 6vw, 40rem);
+    margin-bottom: 4rem;
+
+    border-radius: clamp(8rem, 2vw, 16rem);
+ 
+    background-color: white;
+}
+
+.Heading {
+    margin-bottom: clamp(24rem, 6vw, 32rem);
+}
+
+.Heading img {
+    width: clamp(24rem, 6vw, 40rem);
+    margin-right: clamp(8rem, 2vw, 24rem);
+}
+
+.AfterLine:not(:last-child)::after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 1rem;
+    margin: 20px 0;
+    
+    background-color: var(--Light-Pink);
+}
+
+.Answer {
+    margin-top: 24rem;
+}
+
+.QuestionLine {
+    width: 100%;
+
+    border: 0;
+    outline: 0;
+
+
+    background-color: inherit;
+
+    cursor: pointer;
+}
+
+.QuestionLine:hover span {
+    color: var(--Dark-Purple);
+}
+
+.QuestionLine::selection {
+    background-color: var(--White) !important;
+    color: var(--Dark-Purple) !important;
+}
